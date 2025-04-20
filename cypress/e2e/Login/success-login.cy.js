@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('user berada di halaman login', () => {
-  cy.visit("http://localhost:8000/auth/login");
+  cy.visit("/auth/login");
 });
 
 When('user mengisi email {string} dan password {string}', (email, password) => {

@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('user berada di halaman register', () => {
-  cy.visit("http://localhost:8000/auth/register");
+  cy.visit("/auth/register");
 });
 
 When('user klik teks {string}', (text) => {
