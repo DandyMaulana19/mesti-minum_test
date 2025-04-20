@@ -10,5 +10,5 @@ Feature: Register
     When user mengisi nama "testuser"
     And user mengisi email "testuser@example.com"
     And user mengisi password "password" dan konfirmasi "password"
-    And user klik tombol submit
+    And user mengirim pesan
     Then user harus diarahkan ke halaman login
