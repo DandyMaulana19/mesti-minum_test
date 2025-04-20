@@ -6,7 +6,6 @@ beforeEach(() => {
 
 When("user klik tombol logout", () => {
   cy.get(".relative > button > .isax").click();
-  ssssssss;
 });
 
 Then("user diarahkan ke halaman utama setelah logout", () => {
