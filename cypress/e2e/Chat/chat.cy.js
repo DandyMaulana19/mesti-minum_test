@@ -3,7 +3,7 @@ beforeEach(()=>{
     cy.login("user1@gmail.com", "password")
 })
 Given("user berada di halaman chat", ()=>{
-    cy.visit("http://localhost:8000/profile/chat");
+    cy.visit("/profile/chat");
 });
 When('user klik admin dengan nama {string}', (chat) => {
     cy.contains(chat).click();
