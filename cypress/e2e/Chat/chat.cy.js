@@ -14,7 +14,7 @@ Then('halaman chat harus muncul', () => {
 });
 
 When('user mengisi pesan {string}', (string) => {
-    cy.get("#input-pesan").type(string);
+    cy.get("form > div > textarea").type(string);
 });
 
 When('user klik tombol kirim', () => {
