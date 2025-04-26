@@ -46,12 +46,16 @@ Proyek ini adalah pengaturan latihan untuk menggunakan Cypress, sebuah framework
 ```
 try-cypress/
 ├── cypress/
+│   ├── downloads/
+│   ├── e2e/
+│      ├── admin/
+│      ├── user/
 │   ├── fixtures/
-│   ├── integration/
-│   ├── plugins/
+│      ├── img/
+│   ├── screenshots/
 │   └── support/
 ├── node_modules/
-├── cypress.json
+├── cypress.config.js
 ├── package.json
 └── README.md
 ```
