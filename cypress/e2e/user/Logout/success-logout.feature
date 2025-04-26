@@ -1,4 +1,3 @@
-@logoutUser
 Feature: Logout
 
 Background:
