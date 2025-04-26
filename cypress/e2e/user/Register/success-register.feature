@@ -1,3 +1,4 @@
+@skipGlobalBeforeEach
 Feature: Register
 
   Scenario: Akses halaman register

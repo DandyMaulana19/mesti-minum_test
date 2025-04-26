@@ -1,4 +1,5 @@
-Feature: Login
+@skipGlobalBeforeEach
+Feature: Login User
 
   Scenario: User login dengan kredensial valid
     Given user berada di halaman login

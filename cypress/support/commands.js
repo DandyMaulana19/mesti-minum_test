@@ -24,14 +24,24 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+const specPath = Cypress.spec.relative;
+const isAdminPath = specPath.includes("/admin/");
 
-Cypress.Commands.add("login", (email, password) =>{
-    const baseUrl = Cypress.config('baseUrl');
-    cy.session([email, password], () =>{
-        cy.visit("/auth/login")
-        cy.get("#email").type(email);
-        cy.get("#password").type(password);
-        cy.get('button[type="submit"]').click();
-        cy.url().should("be.equal", baseUrl);
+Cypress.Commands.add("login", (email, password) => {
+  const baseUrl = Cypress.config("baseUrl");
+  cy.session([email, password], () => {
+    cy.visit("/auth/login");
+    cy.get("#email").type(email);
+    cy.get("#password").type(password);
+    cy.get('button[type="submit"]').click();
+    Cypress.on("uncaught:exception", (err) => {
+      if (err.message.includes("getContext")) return false;
+      return true;
     });
+    if (isAdminPath) {
+      cy.url().should("eq", `${baseUrl}dashboard`);
+    } else {
+      cy.url().should("eq", baseUrl);
+    }
+  });
 });

@@ -1,12 +1,12 @@
 import { When, Then, Given } from "@badeball/cypress-cucumber-preprocessor";
 
-beforeEach(() => {
-  cy.login("user1@gmail.com", "password");
+Given("user telah login", () => {
+  Cypress.session.clearAllSavedSessions();
 });
 
 When("user klik tombol logout", () => {
   cy.visit("/");
-  cy.get(".relative > button > .isax");
+  cy.get(".relative > button > .isax").click();
   cy.get(".py-1 > .block").click({ force: true });
 });
 

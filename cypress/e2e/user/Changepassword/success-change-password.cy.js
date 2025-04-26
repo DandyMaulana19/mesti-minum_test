@@ -1,9 +1,5 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-beforeEach(() => {
-  cy.login("user1@gmail.com", "password");
-});
-
 When("user berada di halaman change password", () => {
   cy.visit("/profile/change-password");
 });
