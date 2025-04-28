@@ -1,6 +1,6 @@
 Feature: Update Product
 
-Scenario:
+Scenario: Success Update Product
   When admin berada di halaman product
   And admin klik tombol edit pada product
   Then admin diarahkan ke halaman edit product
